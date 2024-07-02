@@ -1,15 +1,18 @@
 CC = g++
-CFLAGS = -Wall -g
+CFLAGS = -std=c++11 -Wall
 APPLICATION = hegemony_server
 INCLUDES = -Iinclude
 
+OBJECTS = main.o pch.o
+
 all: $(APPLICATION)
 
-$(APPLICATION): main.o
-	$(CC) $(CFLAGS) -o $(APPLICATION) main.o
+$(APPLICATION): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(APPLICATION) $(OBJECTS)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<
 
 clean:
 	rm -f *.o $(APPLICATION)
+
