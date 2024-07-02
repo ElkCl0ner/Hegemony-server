@@ -1,0 +1,11 @@
+# VS Code
+.vscode/
+
+# Libraries
+include/
+
+# Object files
+*.o
+
+# Executables
+hegemony_server
