@@ -83,8 +83,8 @@ int main(int argc, char* argv[]) {
   ws_server.set_close_handler(_on_close);
   ws_server.set_message_handler(_on_message);
 
-  // Listen on port 9002
-  ws_server.listen(9002);
+  // Listen on port 8080
+  ws_server.listen(8080);
 
   // Start the server accept loop
   ws_server.start_accept();
